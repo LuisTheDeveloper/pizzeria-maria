@@ -2,13 +2,17 @@
 
 Back-end application to processand store information on pizzas and orders.
 
-Let's help Aunt Maria to catch up with the competition by building a serverless API for her pizzeria. 
+Let's help Aunt Maria to catch up with the competition by building a serverless API for her pizzeria.
 
 We will use the following technologies:
+
 - adding routes to the API;
-- deploying it to AWS Lambda using Claudia; 
-- to persist and deliver all orders; 
+- deploying it to AWS Lambda using Claudia;
+- to persist and deliver all orders;
 - connecting the API to the DynamoDB table;
 - communicate the API with a third-party service;
+- debug serverless application;
+- authenticate and authorize users;
+- images manipulation;
 
 Note: aws access key and secret key will not be exposed here.
