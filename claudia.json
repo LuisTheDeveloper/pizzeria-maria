@@ -1,0 +1,11 @@
+{
+  "lambda": {
+    "role": "pizzeriamaria-executor",
+    "name": "pizzeriamaria",
+    "region": "us-east-2"
+  },
+  "api": {
+    "id": "etyz7t1l05",
+    "module": "api"
+  }
+}
