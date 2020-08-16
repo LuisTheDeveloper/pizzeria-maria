@@ -46,6 +46,7 @@ Here is the list of features for the initial API that will be created in a singl
   Each feature will have their own route to the corresponding handler.
 
 NPM packages to install:
+aws-sdk
 claudia
 claudia-api-builder
 claudia-bot-builder
