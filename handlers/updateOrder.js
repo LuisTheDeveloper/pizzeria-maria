@@ -9,12 +9,12 @@ const updateOrder = (orderId, options) => {
     .update({
       TableName: "pizza-orders",
       Key: { orderId: orderId },
-      UpdateExpression: "set pizza = :p, address = :a",
+      UpdateExpression: "SET pizza = :p, address = :a",
       ExpressionAttributeValues: {
         ":p": options.pizza,
         ":a": options.address,
       },
-      ReturnValues: "ALL-NEW",
+      ReturnValues: "ALL_NEW",
     })
     .promise()
     .then((result) => {
