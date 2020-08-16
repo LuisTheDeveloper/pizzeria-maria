@@ -50,3 +50,9 @@ aws-sdk
 claudia
 claudia-api-builder
 claudia-bot-builder
+
+To create the right user policy from the aws CLI:
+\$ aws iam put-role-policy --role-name pizzeriamaria-executor --policy-name PizzaMariaApiDynamoDB --policy-document file://./roles/dynamodb.json
+
+To scan the table:
+\$aws dynamodb scan --table-name pizza-orders --region us-east-2 --output json
