@@ -1,8 +1,8 @@
 const AWS = require("aws-sdk");
 const docClient = new AWS.DynamoDB.DocumentClient();
 
-const createOrder = (order) => {
-  if (!order || !order.pizzaId || !order.address)
+const createOrder = (request) => {
+  if (!request || !request.pizzaId || !request.address)
     throw new Error(
       "To order pizza please provide pizza type and address where pizza should be delivered"
     );
