@@ -15,12 +15,12 @@ We will use the following technologies:
 - deploying it to AWS Lambda using Claudia (https://github.com/claudiajs/claudia/blob/master/FAQ.md);
 - to persist and deliver all orders;
 - connecting the API to the DynamoDB table;
-- communicate the API with a third-party service;
+- communicate the API with a third-party service using webhooks;
 - debug serverless application;
 - authenticate and authorize users;
 - images manipulation;
-
-Note: aws access key and secret key will not be exposed here.
+- using minimal-request-promise
+  Note: aws access key and secret key will not be exposed here.
 
 Because we are using AWS, these are the building blocks for serverless aws applications:
 
@@ -56,3 +56,12 @@ To create the right user policy from the aws CLI:
 
 To scan the table:
 \$aws dynamodb scan --table-name pizza-orders --region us-east-2 --output json
+
+A serverless application must be able to connect to:
+
+- A database (DynamoDB, Amazon RDS)
+- Another Lambda function
+- Another AWS service (SQS, S3, and many others)
+- An external API
+
+A webhook is just an endpoint on your API. Simply put, it is an HTTP callback: an HTTP POST request sent to you when something happens. You can think of it as a simple event notification via HTTP POST. A web application implementing webhooks will POST a message to a URL when certain events happen.

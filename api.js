@@ -3,6 +3,7 @@
 const Api = require("claudia-api-builder");
 const api = new Api();
 
+const updateDeliveryStatus = require("./handlers/updateDeliveryStatus");
 const getPizzas = require("./handlers/getPizzas");
 const getOrders = require("./handlers/getOrders");
 const createOrder = require("./handlers/createOrder");
@@ -62,9 +63,15 @@ api.delete(
     return deleteOrder(request.pathParams.id);
   },
   {
+    success: 200,
     error: 400,
   }
 );
+
+api.post("/delivery", (request) => updateDeliveryStatus(request.body), {
+  success: 200,
+  error: 400,
+});
 
 module.exports = api;
 
