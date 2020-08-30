@@ -76,3 +76,4 @@ api.post("/delivery", (request) => updateDeliveryStatus(request.body), {
 module.exports = api;
 
 //"https://etyz7t1l05.execute-api.us-east-2.amazonaws.com/latest"
+//aws iam put-role-policy --role-name pizzeriamaria-executor --policy-name pizzaApiDynamoDB --policy-document file://./roles/dynamodb.json
