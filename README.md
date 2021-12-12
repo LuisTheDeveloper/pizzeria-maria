@@ -1,6 +1,6 @@
 # pizzeria-maria
 
-Back-end application to processand store information on pizzas and orders.
+Back-end application to process and store information on pizzas and orders.
 
 Let's help Aunt Maria to catch up with the competition by building a serverless API for her pizzeria.
 
